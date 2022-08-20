@@ -15,7 +15,7 @@ const filterByName = (data, valor) => {
   if (valor === "A-Z") {
     data.sort((a, b) =>
       a.name.localeCompare(b.name)
-    ); /* localeCompare compara sequências em uma localidade específica */
+    ); /* localeCompare compara sequências em uma localidade específica - para sabermos que estamos trabalhando com strings */
   } else {
     data.sort((a, b) => b.name.localeCompare(a.name));
   }
@@ -27,10 +27,10 @@ const filterByNum = (data, valor) => {
     data.sort((a, b) => {
       /* sort para ordenar os items da array */
       if (a.num > b.num) {
-        /* Se compare(a, b) for maior que zero, o método sort() classificará b com um índice menor que a, ou seja, b virá primeiro.*/
+        /* e compare(a, b) for menor que zero, o método sort() classifica a para um índice menor que b. Ou seja, o a virá antes de b.*/
         return 1;
       } else if (a.num < b.num) {
-        /* e compare(a, b) for menor que zero, o método sort() classifica a para um índice menor que b. Ou seja, o a virá antes de b.*/
+        /* Se compare(a, b) for maior que zero, o método sort() classificará b com um índice menor que a, ou seja, b virá primeiro.*/
         return -1;
       } else if (a.num === b.num) {
         /* Se compare(a, b) retornar zero, o método sort() considera a igual a b e deixa suas posições inalteradas. */
@@ -50,4 +50,9 @@ const filterByNum = (data, valor) => {
   }
 };
 
-export { filterByName, filterByNum, filterByType };
+const searchByName = (data, name) => {
+  const filterBySearch = data.filter((pokemon) => pokemon.name.includes(name));
+  return filterBySearch;
+};
+
+export { filterByName, filterByNum, filterByType, searchByName };

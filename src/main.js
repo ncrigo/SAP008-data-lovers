@@ -1,9 +1,10 @@
 import data from "./data/pokemon/pokemon.js";
 
-import { filterByType, filterByName, filterByNum } from "./data.js";
+import { filterByType, filterByName, filterByNum, searchByName } from "./data.js";
 
 //* let para termos o datalist dos Pokémons *//
 let pkmnDataList = data.pokemon;
+let searchSpace = document.getElementById('inputToNameSearch');
 
 /* Aparecer os pokemons no card */
 const scrollCard = document.getElementById("cardScroll");
@@ -59,3 +60,4 @@ typeFilter.addEventListener("change", function () {
   }
   pokemonList(pkmnDataList);
 });
+
