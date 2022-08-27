@@ -5,8 +5,8 @@
 ## Índice
 
 * [1. Resumo do Projeto](#1-resumo-do-projeto)
-* [2. O Usuário](#2-o-usuario)
-* [3. Histórias de Usuários](#3-historias-de-usuarios)
+* [2. O Usuário](#2-o-usuário)
+* [3. Histórias de Usuários](#3-histórias-dos-usuários)
 * [3.1 - O usuário gostaria de ver todos os Pokémons em tela.](#31-o-usuário-gostaria-de-ver-todos-os-pokémons-em-tela)
 * [3.2 O usuário quer procurar seu Pokémon pelo campo de busca.](#32-o-usuário-quer-procurar-seu-pokémon-pelo-campo-de-busca)
 * [3.3 O usuário gostaria de fazer a busca através de um filtro específico.](#33-o-usuário-gostaria-de-fazer-a-busca-através-de-um-filtro-específico)
