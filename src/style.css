@@ -415,46 +415,59 @@ header {
   }
 
   .card-scroll {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media all and (max-width: 900px) {
-  header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .logo {
-    width: 10rem;
-  }
-
-  .card-main-display {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .card-main-pokemon {
     padding: 0rem;
     margin: 0rem;
-    width: 50vw;
+    width: 95vw;
   }
 
   .nav-sort-filter {
-    width: 50vw;
+    width: 95vw;
+    justify-content: center;
   }
 
   .card-scroll {
-    padding: 0rem;
-    margin: 0rem;
-    width: 50vw;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer {
-    font-size: 1rem;
+  .card-main-display {
+    display: grid;
+    justify-content: center;
+    width: 95vw;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
   }
+
+  .input-search {
+    width: 300px;
+    height: 30px;
+    justify-content: center;
+  }
+
+  .card {
+    width: 9rem;
+    height: 12rem;
+  }
+
+  .type-style {
+    width: 90px;
+    font-size: 15px;
+  }
+
+  .name-style{
+    font-size: 15px;
+  }
+
+  .clean-name-button {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;  
+  }
+
 }
