@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>PokéData</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./img/pikachufavi.png">
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="img/logo.png" alt="Logo PokéData" />
+  </header>
+
+  <img class="banner" src="img/banner_pokemon.png" alt="Imagem com quase todos os pokémons juntos, com um retângulo por cima contendo uma pokébola com raios e ao lado
+  direito escrito: Capture as melhores informações do seu pokémon aqui!"/>
+
+  <main>
+    <section class="card-main-display">
+      <div class="card-main-pokemon">
+        <form class="search-space">
+          <input type="text" placeholder="BUSCAR POR NOME" class="input-search" id="searchByNameInput" />
+          <button id="cleanButton" class="clean-name-button">LIMPAR</button>
+        </form>
+
+        <div id="typePercentageCard" class="type-percentage-card"></div>
+
+        <nav class="nav-sort-filter">
+          <select id="sortName" class="btn-nav sort-name">
+            <option value="A-Z">NOME</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+
+          <select id="sortNum" class="btn-nav sort-num">
+            <option value="0-9">NÚMERO</option>
+            <option value="0-9">Crescente</option>
+            <option value="9-0">Decrescente</option>
+          </select>
+
+          <select id="typeFilter" class="btn-nav type-filter">
+            <option value="typeTitle" disabled selected style="display: none">TIPO</option>
+            <option value="all">TIPO</option>
+            <option value="Water">Water</option>
+            <option value="Fire">Fire</option>
+            <option value="Bug">Bug</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Electric">Electric</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Ice">Ice</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Normal">Normal</option>
+            <option value="Grass">Grass</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Rock">Rock</option>
+            <option value="Ground">Ground</option>
+            <option value="Poison">Poison</option>
+            <option value="Flying">Flying</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Dark">Dark</option>
+            <option value="Steel">Steel</option>
+          </select>
+        </nav>
+        <div id="cardScroll" class="card-scroll"></div>
+      </div>
+    </section>
+
+    <div id="modalKnowMore" class="modal-know-more">
+      <div class="modal-card">
+        <div class="modal-header">
+          <button id="closeModalKnowMore" class="btn-close">X</button>
+        </div>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    PokéData, 2022 © Nathalia Rigo e Rayanne Pinto.<br />
+    Todos os direitos reservados.
+  </footer>
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

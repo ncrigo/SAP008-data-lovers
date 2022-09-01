@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300&family=Dosis&family=Familjen+Grotesk:wght@400;500;700&family=Oswald&family=Poppins:wght@500&family=Press+Start+2P&family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Familjen Grotesk", sans-serif;
+}
+
+body {
+  background-color: #2485af;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.logo {
+  width: 20rem;
+}
+
+.banner {
+  width: 100%;
+  border-top: 5px solid #ffcc03;
+  border-bottom: 5px solid #ffcc03;
+}
+
+.card-main-display {
+  display: flex;
+  justify-content: center;
+}
+
+.card-main-pokemon {
+  margin-top: 1rem;
+  box-sizing: border-box;
+  width: 82vw;
+  height: 100vh;
+  border-radius: 10px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  text-align: center;
+  justify-items: center;
+}
+
+.search-space {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-search {
+  width: 400px;
+  height: 45px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-family: "Familjen Grotesk", sans-serif;
+  text-transform: uppercase;
+  border: 3px solid #011b37;
+  font-weight: bold;
+}
+
+.clean-name-button {
+  background-color: #011b37;
+  width: 100px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Familjen Grotesk", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.clean-name-button:hover {
+  background-color: #e28f3c;
+}
+
+.type-percentage-card {
+  background-color: #000;
+  color: #ffffff;
+  width: 82vw;
+  height: max-content;
+  margin-bottom: 4rem;
+  border-radius: 8px;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.3rem;
+  display: none;
+  font-size: 1.2rem;
+}
+
+.nav-sort-filter {
+  background-color: #ffcc03;
+  height: max-content;
+  width: 82vw;
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-nav {
+  width: 20vw;
+  max-width: 150px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgb(63, 35, 35);
+}
+
+.sort-name {
+  background: #5ab2d8;
+}
+
+.sort-name:hover {
+  background: #5dc5ee;
+}
+
+.sort-num {
+  background: #db6154;
+}
+
+.sort-num:hover {
+  background: #fa7d6f;
+}
+
+.type-filter {
+  background: #14b534;
+}
+
+.type-filter:hover {
+  background: #23ca44;
+}
+
+.card-scroll {
+  width: 100%;
+  background-color: #e6d69a;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: space-between;
+  border-radius: 0px 0px 0px 10px;
+  padding: 1rem;
+}
+
+.card {
+  background: #e9dcdc;
+  border: 5px solid #2485af;
+  border-radius: 20px;
+  margin: 0.5rem;
+  padding-bottom: 1rem;
+  width: 12rem;
+  height: 14rem;
+}
+
+.number-style {
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: bold;
+  border-bottom: solid 1px #000;
+  margin-bottom: 0.6rem;
+}
+
+.name-style {
+  text-transform: uppercase;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background-color: #011b37;
+}
+
+.type-style {
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.type-teste {
+  display: flex;
+  justify-content: center;
+}
+
+.water {
+  background-color: #4ba7ce;
+}
+
+.fire {
+  background: linear-gradient(to left, #c02425, #f0cb35);
+}
+.bug {
+  background-color: #54755b;
+}
+
+.dragon {
+  background-color: #e28f3c;
+}
+
+.electric {
+  background: linear-gradient(to left, #8e2de2, #4a00e0);
+}
+
+.ghost {
+  background: linear-gradient(to left, #005aa7, #fffde4);
+}
+
+.ice {
+  background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);
+}
+
+.fighting {
+  background: linear-gradient(to left, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+.normal {
+  background-color: #a27ab1;
+}
+
+.grass {
+  background-color: #59c26c;
+}
+
+.psychic {
+  background: linear-gradient(to left, #5614b0, #dbd65c);
+}
+
+.rock {
+  background-color: #5e647c;
+}
+
+.ground {
+  background: linear-gradient(to left, #1e130c, #9a8478);
+}
+
+.poison {
+  background: linear-gradient(to left, #4776e6, #8e54e9);
+}
+
+.flying {
+  background: linear-gradient(to left, #e55d87, #5fc3e4);
+}
+
+.fairy {
+  background: linear-gradient(to left, #9796f0, #fbc7d4);
+}
+
+.dark {
+  background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
+}
+
+.steel {
+  background: linear-gradient(to left, #bdc3c7, #2c3e50);
+}
+
+.modal-know-more {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.modal-card {
+  margin: 0 auto;
+  margin-top: 7%;
+  width: 450px;
+  height: 550px;
+  background-color: #e5d69a;
+  padding: 0px;
+  box-shadow: 0 0 2px #fff;
+  padding: 15px 30px 30px 30px;
+  border-radius: 20px;
+}
+
+.btn-close {
+  border: none;
+  background-color: #e5d69a;
+  opacity: 75%;
+  font-weight: bold;
+  padding-left: 99%;
+  font-size: 17px;
+  color: #011b37;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-modal {
+  background-color: #e9dcdc;
+  border: 5px solid #2485af;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-bottom: 1rem;
+  width: 12rem;
+  height: 14.5rem;
+  text-align: center;
+}
+
+.modal-stats {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 18px;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: bold;
+  color: #011b37;
+  padding: 1.5rem;
+}
+
+.modal-types {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.modal-types-title {
+  margin-top: 22px;
+  font-size: 18px;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-weight: bold;
+  color: #011b37;
+}
+
+.modal-types-display {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  font-weight: bold;
+  padding: 4rem 0 2rem;
+  color: #fff;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media all and (max-width: 1800px) {
+  .card-scroll {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media all and (max-width: 1562px) {
+  .card-main-pokemon {
+    padding: 0rem;
+    height: 46rem;
+  }
+
+  .card-scroll {
+    grid-template-columns: repeat(5, 1fr);
+    height: 700px;
+  }
+}
+
+@media all and (max-width: 1312px) {
+  .card-main-pokemon {
+    padding: 0rem;
+    height: 50rem;
+  }
+
+  .card-scroll {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .modal-card {
+    width: 450px;
+    height: 550px;
+  }
+}
+
+@media all and (max-width: 1059px) {
+  .logo {
+    width: 20rem;
+  }
+
+  .input-search {
+    font-size: 1rem;
+    width: 400px;
+    height: 45px;
+  }
+
+  .clean-name-button {
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .type-percentage-card {
+    font-size: 1.6rem;
+  }
+
+  .nav-sort-filter {
+    width: 850px;
+    font-size: 5rem;
+  }
+
+  .card-main-pokemon {
+    height: 1050px;
+  }
+
+  .card-scroll {
+    grid-template-columns: repeat(3, 1fr);
+    width: 850px;
+  }
+
+  .card {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  #sortName {
+    font-size: 1rem;
+  }
+
+  #sortNum {
+    font-size: 1rem;
+  }
+
+  #typeFilter {
+    font-size: 1rem;
+  }
+
+  .number-style {
+    font-size: 1rem;
+  }
+
+  .name-style {
+    font-size: 1rem;
+  }
+
+  .type-style {
+    font-size: 1rem;
+    width: 7rem;
+  }
+
+  .modal-card {
+    width: 500px;
+    height: max-content;
+    margin-top: 10rem;
+  }
+
+  .card-modal {
+    background-color: #e9dcdc;
+    border: 5px solid #2485af;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-bottom: 1rem;
+    width: 12rem;
+    height: 14.5rem;
+    text-align: center;
+  }
+
+  .modal-stats {
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+
+  .modal-types {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    text-align: center;
+    width: 20rem;
+  }
+
+  .modal-types-title {
+    font-size: 20px;
+  }
+
+  .btn-close {
+    padding-left: 95%;
+    padding-top: 3%;
+    font-size: 1.3rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .input-search {
+    font-size: 1.2rem;
+  }
+
+  .clean-name-button {
+    font-size: 1.2rem;
+    align-items: center;
+  }
+
+  .card-scroll {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+  }
+
+  .nav-sort-filter {
+    width: 95%;
+  }
+
+  .card {
+    width: 20rem;
+    height: 18rem;
+    margin: 1rem auto 1rem auto;
+  }
+
+  #sortName {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  #sortNum {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  #typeFilter {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .number-style {
+    font-size: 1.5rem;
+  }
+
+  .name-style {
+    font-size: 1.5rem;
+  }
+
+  .type-style {
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+
+  .modal-card {
+    width: 600px;
+    height: 680px;
+    margin-top: 5rem;
+  }
+
+  .card-modal {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 15rem;
+    height: 18rem;
+  }
+
+  .modal-stats {
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 23px;
+  }
+
+  .modal-types {
+    margin-left: 40px;
+  }
+
+  .modal-types-title {
+    font-size: 23px;
+  }
+}
+
+@media all and (max-width: 940px) {
+  .logo {
+    width: 15rem;
+  }
+
+  .input-search {
+    width: max-content;
+  }
+
+  .card-main-pokemon {
+    align-items: center;
+  }
+
+  .card-scroll {
+    grid-template-columns: repeat(1, 1fr);
+    width: 400px;
+  }
+
+  .nav-sort-filter {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-nav {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .card {
+    width: 18rem;
+    height: 16rem;
+  }
+
+  #sortName {
+    font-size: 1.2rem;
+  }
+
+  #sortNum {
+    font-size: 1.2rem;
+  }
+
+  #typeFilter {
+    font-size: 1.2rem;
+  }
+
+  .number-style {
+    font-size: 1.2rem;
+  }
+
+  .name-style {
+    font-size: 1.2rem;
+  }
+
+  .type-style {
+    font-size: 1.2rem;
+    width: 7rem;
+  }
+
+  .modal-card {
+    width: 435px;
+    height: 600px;
+    margin-top: 5rem;
+  }
+
+  .card-modal {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 12rem;
+    height: 16rem;
+  }
+
+  .modal-stats {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .modal-types {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    text-align: center;
+    width: 20rem;
+  }
+
+  .modal-types-title {
+    font-size: 20px;
+  }
+
+  .btn-close {
+    font-size: 1.2rem;
+  }
+}
