@@ -7,10 +7,9 @@ import {
 } from "./data.js";
 
 import data from "./data/pokemon/pokemon.js";
-//* let para termos o datalist dos Pokémons *//
+
 let pkmnDataList = data.pokemon;
 
-/* Aparecer os pokemons no card */
 const scrollCard = document.getElementById("cardScroll");
 
 function pokemonList(pokemons) {
@@ -27,10 +26,10 @@ function pokemonList(pokemons) {
 
     card.innerHTML = `
     <div class="card">
-    <img src=${pokemon.img} alt="Foto pokémon">
-    <p class="number-style">${pokemon.num}</p>
-    <p class="name-style">${pokemon.name}</p>    
-    <div class="type-teste">${typesPkmn}</div>
+      <img src=${pokemon.img} alt="Foto pokémon">
+      <p class="number-style">${pokemon.num}</p>
+      <p class="name-style">${pokemon.name}</p>    
+      <div class="type-teste">${typesPkmn}</div>
     </div>
     `;
 
@@ -41,9 +40,9 @@ function pokemonList(pokemons) {
     scrollCard.appendChild(card);
   });
 }
+
 pokemonList(pkmnDataList);
 
-/* Acionando os filtros */
 const alphabeticOrdenation = document.getElementById("sortName");
 const numberAscDescOrdenation = document.getElementById("sortNum");
 const typeFilter = document.getElementById("typeFilter");
@@ -69,8 +68,6 @@ numberAscDescOrdenation.addEventListener("change", function () {
 });
 
 typeFilter.addEventListener("change", function () {
-  pkmnDataList = data.pokemon;
-
   const typePercentage = document.getElementById("typePercentageCard");
 
   let filteredPokemons = [];
@@ -97,7 +94,7 @@ document
 
 function searchName(evento) {
   const name = evento.target.value;
-  const result = searchByName(data.pokemon, name);
+  const result = searchByName(pkmnDataList, name);
   pokemonList(result);
 }
 
@@ -106,15 +103,11 @@ const clearButton = document.getElementById("cleanButton");
 function cleanInput() {
   FormData.reset();
 }
+
 clearButton.addEventListener("click", cleanInput);
 
-/*Modal*/
 function openModal(pokemon) {
   const modal = document.getElementById("modalKnowMore");
-
-  if (typeof modal == "undefined" || modal === null) {
-    return;
-  }
 
   let typesPkmn = "";
   let resistantPkmn = "";
@@ -164,7 +157,10 @@ function openModal(pokemon) {
     </div>
   `;
 
+  const footer = document.getElementById("footerText");
+
   modal.style.display = "block";
+  footer.style.display = "none";
   document.body.style.overflow = "hidden";
 }
 
@@ -174,10 +170,9 @@ button.addEventListener("click", closeModal);
 function closeModal() {
   const modal = document.getElementById("modalKnowMore");
 
-  if (typeof modal == "undefined" || modal === null) {
-    return;
-  }
+  const footer = document.getElementById("footerText");
 
   modal.style.display = "none";
+  footer.style.display = "block";
   document.body.style.overflow = "auto";
 }
